@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript functions</h2>
+    <p>This example basically does a calc and prints the result</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+
+
+
+<script>
+    let output = "";
+    let myArray = [];
+    for (let i = 0; i < 10; i++) {
+        let x = Math.random(); 
+        output += x + "<br>";
+        myArray[i] = x
+        console.log(myArray);
+    }
+    
+
+    
+    document.getElementById("demo1").innerHTML = myArray; 
+</script>
+
+
+<script>
+    let results = 0
+    for (let i = 0; i < 10; i++) {
+        
+        results = results + myArray[i];
+        
+    }
+        total = results
+    
+    document.getElementById("demo3").innerHTML = total; 
+</script>
+
+<script>
+    let count = 0
+    let averrage = 0
+    for (let i = 0; i < myArray.length; i++) {
+        
+        count += 1
+    }
+        averrage = total / count
+    
+    document.getElementById("demo4").innerHTML = averrage; 
+</script>
+    
+<script>
+    let mins = 0
+    min = myArray.sort(function(a, b){return a - b}); console.log(min)
+    mins = min[0]
+    document.getElementById("demo5").innerHTML = mins; 
+</script>
+
+<script>
+    let maxs = 0
+    max = myArray.sort(function(a, b){return b - a}); console.log(max)
+    maxs = max[0]
+    document.getElementById("demo5").innerHTML = maxs; 
+</script>
+
+
+</body>
+</html>
